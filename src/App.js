@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { getMoviesData } from './utils/data';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    getMoviesData()
+  }, [])
+  
   return (
     <div className="App">
       <header className="App-header">
